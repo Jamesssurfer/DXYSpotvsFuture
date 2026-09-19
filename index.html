@@ -15,7 +15,7 @@
         <div class="max-w-full mx-auto px-4 py-8">
             <header class="mb-6 border-b border-gray-200 pb-4">
                 <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">DXY Spot vs Synthetic Future Basis Tracker</h1>
-                <p class="text-sm text-gray-500 mt-2">Automated Execution Pipeline Log &mdash; Generated Live on 2026-09-18 08:28:48 &middot; sampled at the CME FX settlement instant (2:00 PM Chicago time, DST-aware &rarr; 3 AM SGT in summer / 4 AM SGT in winter) on both legs. The USD Index future is a synthetic construction from EUR/JPY/GBP/CAD/CHF futures vs spot &mdash; SEK excluded, weights rescaled (see the USD panel's note column).</p>
+                <p class="text-sm text-gray-500 mt-2">Automated Execution Pipeline Log &mdash; Generated Live on 2026-09-19 09:25:52 &middot; sampled at the CME FX settlement instant (2:00 PM Chicago time, DST-aware &rarr; 3 AM SGT in summer / 4 AM SGT in winter) on both legs. The USD Index future is a synthetic construction from EUR/JPY/GBP/CAD/CHF futures vs spot &mdash; SEK excluded, weights rescaled (see the USD panel's note column).</p>
             </header>
             <div class="mb-4"><button onclick="showAsset('USD')" id="btn-USD" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-800 text-white">USD Index (Synthetic)</button><button onclick="showAsset('EUR')" id="btn-EUR" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-200 text-gray-700">EUR/USD</button><button onclick="showAsset('JPY')" id="btn-JPY" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-200 text-gray-700">USD/JPY</button><button onclick="showAsset('GBP')" id="btn-GBP" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-200 text-gray-700">GBP/USD</button><button onclick="showAsset('CAD')" id="btn-CAD" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-200 text-gray-700">USD/CAD</button><button onclick="showAsset('CHF')" id="btn-CHF" class="px-4 py-2 rounded text-sm font-semibold mr-2 mb-2 bg-gray-200 text-gray-700">USD/CHF</button></div>
             
@@ -41,6 +41,51 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.9400</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.05%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.08</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.5486</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.07%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.39</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.392%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Narrower)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.03</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.8900</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.57%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.05</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.4838</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.57%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.41</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.407%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#1F4E78;color:#FFFFFF;font-weight:bold;">Carry Cheapening (Elevated)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.03</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">⚠️ CARRY REGIME SHIFT</td>
+        </tr>
+        
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-15</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.3200</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.24%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.09</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">98.9162</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.24%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.40</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.407%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#1F4E78;color:#FFFFFF;font-weight:bold;">Carry Cheapening (Elevated)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.03</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">⚠️ CARRY REGIME SHIFT</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-14</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">99.0800</td>
@@ -142,7 +187,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.075%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.01</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.01</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -247,7 +292,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.130%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.01</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.01</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -446,51 +491,6 @@
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-04</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.7200</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.01%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.12</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.4982</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.01%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.22</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.222%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-07-31</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.7300</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.02%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.18</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.5067</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.03%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.22</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.224%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-07-30</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.7100</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.99%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.09</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">99.4730</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.98%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.24</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.238%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
                         </tbody>
                     </table>
                 </div>
@@ -519,6 +519,21 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.1476</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.02%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.1516</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.03%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-green-600">+0.00</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.356%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future > Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">1.1478</td>
@@ -575,7 +590,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.015%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future > Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Narrower)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -954,21 +969,6 @@
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-05</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.1553</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.19%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.1572</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.19%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-green-600">+0.00</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.165%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
                         </tbody>
                     </table>
                 </div>
@@ -997,6 +997,21 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">156.0170</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.13%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.40</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">154.9787</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.18%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-1.04</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.666%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Narrower)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.10</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">155.8120</td>
@@ -1083,7 +1098,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.032%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.02</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.02</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -1432,21 +1447,6 @@
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-05</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">157.6610</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.04%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">157.1833</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.03%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.48</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.303%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
                         </tbody>
                     </table>
                 </div>
@@ -1475,6 +1475,21 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3353</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.26%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3360</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.25%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-green-600">+0.00</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.051%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future > Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#C00000;color:#FFFFFF;font-weight:bold;">Carry Richening (Elevated)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">⚠️ CARRY REGIME SHIFT</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3388</td>
@@ -1741,7 +1756,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.001%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future > Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Narrower)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -1910,21 +1925,6 @@
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-05</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3469</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.14%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3469</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.13%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-green-600">+0.00</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">+0.001%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
                         </tbody>
                     </table>
                 </div>
@@ -1953,6 +1953,51 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3991</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.04%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3931</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.04%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.423%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3985</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.49%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3926</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.49%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.423%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-15</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3917</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.12%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3857</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.12%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.427%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-14</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3900</td>
@@ -2129,7 +2174,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.489%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Wider)</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -2358,51 +2403,6 @@
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-04</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.4064</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.35%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3980</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.33%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.598%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-07-31</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.4015</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.11%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3934</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.19%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.573%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-07-30</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3999</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.28%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">+0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">1.3908</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.29%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.646%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
                         </tbody>
                     </table>
                 </div>
@@ -2431,6 +2431,21 @@
                         </thead>
                         <tbody class="divide-y divide-gray-200">
                             
+        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
+            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-17</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">0.8246</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.05%</td>
+            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
+            <td class="px-4 py-3 font-semibold whitespace-nowrap">0.8165</td>
+            <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.09%</td>
+            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.01</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.982%</td>
+            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Future < Spot</td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">Carry Drifting (Narrower)</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
+        </tr>
+        
         <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
             <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-09-16</td>
             <td class="px-4 py-3 font-semibold whitespace-nowrap">0.8241</td>
@@ -2847,7 +2862,7 @@
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.371%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#FCE4D6;color:#C65911;">0.00</span></td>
+            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">0.00</span></td>
             <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
         </tr>
         
@@ -2860,21 +2875,6 @@
             <td class="px-4 py-3 font-medium whitespace-nowrap text-green-600">+0.66%</td>
             <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.00</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.383%</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
-            <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
-            <td class="px-4 py-3 text-gray-500 font-medium whitespace-nowrap">Normal Trading</td>
-        </tr>
-        
-        <tr class="hover:bg-gray-50 border-b border-gray-200 text-sm">
-            <td class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap">2026-08-05</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">0.8068</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.29%</td>
-            <td class="px-4 py-3 text-gray-600 whitespace-nowrap">-0.00</td>
-            <td class="px-4 py-3 font-semibold whitespace-nowrap">0.8035</td>
-            <td class="px-4 py-3 font-medium whitespace-nowrap text-red-600">-0.28%</td>
-            <td class="px-4 py-3 font-bold whitespace-nowrap text-red-600">-0.00</td>
-            <td class="px-4 py-3 text-gray-500 whitespace-nowrap">-0.415%</td>
             <td class="px-4 py-3 text-gray-500 whitespace-nowrap">Structural: Flat</td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs whitespace-nowrap" style="background-color:#F2F2F2;color:#333333;">Normal Carry Range</span></td>
             <td class="px-4 py-3 text-center"><span class="px-3 py-1 rounded text-xs font-semibold whitespace-nowrap" style="background-color:#E2EFDA;color:#375623;">nan</span></td>
